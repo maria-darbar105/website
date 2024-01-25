@@ -1,0 +1,56 @@
+/*for grey*/
+.greyGlow {
+    font-size: 40px;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow:0 0 20px #fff, 0 0 30px #b3b0b2, 0 0 40px #969495, 0 0 50px #757474, 0 0 60px #454445, 0 0 70px #2a2929, 0 0 80px #060505;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #b3b0b2, 0 0 40px #969495, 0 0 50px #757474, 0 0 60px #454445, 0 0 70px #2a2929, 0 0 80px #060505;
+    }
+  }
+
+
+
+
+/*for pink*/
+  .pinkGlow {
+    font-size: 40px;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9de6ff, 0 0 40px #6c97f4, 0 0 50px #468df7, 0 0 60px #4167e3, 0 0 70px #006be6;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  /*for beige*/
+  .beigeGlow {
+    font-size: 40px;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px hwb(51 55% 15% / 0.498), 0 0 20px hwb(51 55% 15% / 0.498), 0 0 30px hwb(51 55% 15% / 0.498), 0 0 40px hwb(51 55% 15% / 0.498), 0 0 50px hwb(51 55% 15% / 0.498), 0 0 60px hwb(51 55% 15% / 0.498), 0 0 70px hwb(51 55% 15% / 0.498);
+    }
+    
+    to {
+      text-shadow: 0 0 20px hwb(51 55% 15% / 0.498), 0 0 30px hwb(51 55% 15% / 0.498), 0 0 40px hwb(51 55% 15% / 0.498), 0 0 50px hwb(51 55% 15% / 0.498), 0 0 60px hwb(51 55% 15% / 0.498), 0 0 70px hwb(51 55% 15% / 0.498), 0 0 80px hwb(51 55% 15% / 0.498);
+    }
+  }
+  
+  
+
