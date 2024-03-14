@@ -1,162 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html> 
     <head>
-        <title>portfolio</title>
-        <link rel="stylesheet" type="text/css" href="homestyle.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <title>home</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,900..900&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <style>
-        /*body*/
-        body
-        {
-            background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(images/bg.about.jpg) no-repeat;
-            background-position: center;
-            background-attachment: local;
-            background-size: cover;
-            font-family: "DM Serif Display", serif;
-            font-size: 20px;
-        }
-
-        .dm-serif display-regular {
-            font-family: "DM Serif Display", serif;
-            font-weight: 100;
-            font-style: normal;
-        }
-
-            .dm-serif display-regular-italic {
-            font-family: "DM Serif Display", serif;
-            font-weight: 100;
-            font-style: italic;
-        }
-
-        .reveal{
-            position: relative;
-            transform: translateY(150px);
-            opacity: 0;
-            transition: 1s all ease;
-        }
+            body{    
+                background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(images/bg\ 2.jpg) no-repeat;          
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+                min-height: 100vh;
+                animation: fadeIn 2s;
+                }
+            
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+                }
         
-        .reveal.active{
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .grid-container 
-        {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            grid-gap: 10px;
-        }
-
-        .grid-container > div 
-        {
-            text-align: center;
-            padding: 20px 0;
-            -ms-flex: 25%; /* IE10 */
-            flex: 25%;
-            padding: 0 3px;
-        }
-        .grid-container img
-        {
-            margin-top: 8px;
-            vertical-align: middle;
-            width: 100%;
-        }
-        .item1a {
-            grid-row: 1 / span 2;
-        }
-        .item1b {
-            grid-row: 1 / span 2;
-        }
-        .item3b {
-            grid-row: 1 / span 2;
-        }
-        .item3c {
-            grid-row: 1 / span 2;
-        }
-
-/*for desktop*/
-        @media(min-width:768px) {
-            .img-width{
+            .parent{
+                display: flex;
+            }
+            
+            .child{
+                padding: 5px;
                 width:50%
             }
-        }
+            
+            .reveal{
+                position: relative;
+                transform: translateY(150px);
+                opacity: 0;
+                transition: 1s all ease;
+                }
 
-/*for phone*/
+            .reveal.active{
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .img{
+                padding: 10px;
+            }
+
+            p{
+                color: white;
+            }
+
+            a{
+                color: white;  
+            }
+            
+            h1{
+                color: white;
+            }
+
+    /*for desktop*/
+        @media(min-width:768px) {
+                body{
+                    margin-left: 10%;
+                    margin-right: 10%;
+                    border:5px;
+                    border-style:solid ;
+                    border-color: rgba(245, 245, 245, 0.667);
+                    border-radius: 4px;
+                    font-size: 20px;
+                    
+                }
+
+                .img-pc{ 
+                    width:50%;
+                }
+                
+                .parent{
+                display:flex;
+                width:75%;
+                margin:auto;
+                padding-bottom: 3%;
+                }
+                
+                .child{
+                padding: 10px;
+                width:50%;
+                }
+            }
+
+    /*for phone*/
         @media(max-width:768px) and (orientation:portrait)
         {
-            .grid-container{
-            display: grid;
-            grid-template-columns:auto;
-            grid-gap: 10px;
-            overflow: hidden;
+            body{
+                font-size: 20px;
             }
-            .img-width{
+
+            .img{
                 width:100%;
+                padding-top: 10%;
+                padding-bottom: 10%;
+            }
+            .img-pad{
+                padding-bottom: 20%;
+            }
+        }
+
+        @media screen and (orientation:landscape)
+        and (min-device-width: 319px) 
+        and (max-device-width: 480px)
+        {
+            .img-csm{
+                width:50%;
+            }
+            .parent{
+                margin-left: 10px;
+                margin-right: 10px;
+                z-index: 2;
+            }
+            body{
+                border-color: rgba(255, 255, 255, 0);
+                z-index: 2;
             }
         }
         </style>
     </head>
-    <body>
-        <div class="fade-in-text">
-            <div class="center">   
-            <a href="index.html"><img src="images/callmeifyougetlostid.png" height="190" style="filter:drop-shadow(0 0 8px  rgba(206, 197, 130, 0.76));padding:20px"></a> 
-            <br><br>
-            </div>
-            <p style="letter-spacing: 3px; text-align: center;font-size: 24px; color:white;">
-                    <a style="text-decoration: none;color:rgb(194, 162, 223)" href="artworks.html">artworks</a>
-                    <span class="tab"></span><span class="tab"></span>
-                    <a style="text-decoration: none;color:rgb(194, 162, 223)" href="crochet.html">crochet</a></p>
-        
-        <br><br>
-        
-        <h3 style="text-align: center;color: white;">crochet</h3>
-        <div class="grid-container">
-                <div class="item1a"><div class="zoom"><a href="artwork pages/butterfly top.html"><img src="artworks/butterfly top .jpg"></a></div></div>
-                <div class="item1b"><div class="zoom"><a href="artwork pages/pants.html"><img src="artworks/pants.jpg"></a></div></div>
-            <div class="img-width">    
-                <div class="item1"><div class="zoom"><a href=""><img src="artworks/hat.jpg"></a></div></div>
-                <div class="item1"><div class="zoom"><a href="artwork pages/leg warmers.html"><img src="artworks/leg warmers.jpg"></a></div></div>
-            </div>
-        </div>
-        <br><br>
-
-        <h3 style="text-align: center;color: white;">custom clothes</h3>
-        <div class="grid-container">
-
-        </div>
-        <br><br>
-        
+    <body> 
+    <div class="fade-in-text">
+    <div class="parent">
+        <h1 style="padding-top: 20px;padding-left: 20px;">PORTFOLIO</h1>
+    </div>
         <div class="container reveal">
-            <script type="text/javascript">
-                function reveal() {
-                var reveals = document.querySelectorAll(".reveal");
-    
-                for (var i = 0; i < reveals.length; i++) {
-                    var windowHeight = window.innerHeight;
-                    var elementTop = reveals[i].getBoundingClientRect().top;
-                    var elementVisible = 150;
-    
-                    if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                    }
-                }
-                }
-    
-                window.addEventListener("scroll", reveal);
-            </script>
+        <script type="text/javascript">
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
 
-            <h3 style="text-align: center;letter-spacing: 2px; position: relative; color:white;font-family:Montserrat,sans-serif;">★ MARIA DARBAR ★</h3>
-            <a href="mailto:mariadarbar05@gmail.com" style="text-decoration: none;font-family:Montserrat,sans-serif;" target="_blank" ><h4 style="text-align: center;color:white">mariadarbar05@gmail.com</h4>
-            <p style="text-align: center;font-weight: 100;">
-                <a href="https://www.instagram.com/maria.darbar/" target="_blank"><img src="images/instagram logo.png" width="25" height="25"></a>
-                <span class="tab"></span>
-                <a href="https://www.linkedin.com/in/maria-darbar/" target="_blank"><img src="images/linkedin-xxl.png" width="23" height="23"></a>
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+        </script>
+    <section class="parent">
+        <section class="child" style="width:50%;">
+            <h1 style="margin-top: 30px;color:rgb(209, 180, 235)">Hello.</h1>
+            <p>
+            I am a self taught artist with a lot of passion for sketching. I have been sketching and drawing 
+            since I was thirteen, and have since gained quite some experience in creating what I like. I have a 
+            huge interest in art in general, especially music, and I love to explore different genres in my 
+            free time. Likewise I love to try out various art styles including realism, copy art, and my own 
+            art style. I am still discovering my art style, but I have learnt a lot in the process so far.
             </p>
-            <h4 style="text-align: center;color:white;font-family:Montserrat,sans-serif;">© 2024 All rights reserved.</h4>
-        </div>        
-        </body>    
-    </html>
+        </section>
+        <section class="child">
+            <br><br>
+            <a href="artworks.html" style="text-decoration: none;color: rgb(229, 204, 242);">⋆ Check out my artwork here!</a>
+            <br><br>
+        <div class="img-pc"><div class="img-ls">
+            <div class="img-pad">
+            &nbsp;&nbsp;&nbsp;&nbsp;<img src="artworks/csm.jpeg" style="filter:brightness(80%)"width="85%">
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;<img src="artworks/women.jpg" style="filter:brightness(80%)"width="85%">
+        </div></div>
+        </section>
+    </section>
+    </div>
+
+    <div class="container reveal">
+        <script type="text/javascript">
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+        </script>
+    <section class="parent">
+        <section class="child">
+        <br><br>
+            <a href="crochet.html" style="text-decoration: none;color: rgb(229, 204, 242);">⋆ Check out my crochet projects and 
+            customized clothing here!</a>
+            <br><br>
+            <div class="img">
+            <img src="artworks/leg warmers.jpg" style="filter:brightness(80%);" width="160px">
+            </div>
+        </section>    
+        <section class="child">
+        <h1 style="color:rgb(209, 180, 235)">Hobbies</h1>
+        <p>Along with sketching, I really enjoy crafts. I have made a lot of best-out-of-waste projects as a
+           child. Aside from such crafts, I also really enjoy crocheting and customizing clothes, mainly using 
+           bleach. I do enjoy fashion, but I love creating things that express what I like even more. And so 
+           I'm always looking forward to customizing my own clothes out of a plain pair of jeans or a simple 
+           black tshirt.
+        </p>
+        </section>
+    </section>
+    
+    <br><br><br><br><br><br>
+    <div class="container reveal">
+        <script type="text/javascript">
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+    </script>
+        <h3 style="text-align: center;letter-spacing: 2px; position: relative; color:white;">★ MARIA DARBAR ★</h3>
+        <a href="mailto:mariadarbar05@gmail.com" style="text-decoration: none;" target="_blank" ><h4 style="text-align: center;color:white">mariadarbar05@gmail.com</h4></a>
+        <p style="text-align: center;font-weight: 100;">
+            <a href="https://www.instagram.com/maria.darbar/" target="_blank"><img src="images/instagram logo.png" width="25" height="25"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/maria-darbar/" target="_blank"><img src="images/linkedin-xxl.png" width="23" height="23"></a>
+        </p>
+        <h4 style="text-align: center;color:white;">© 2024 All rights reserved.</h4>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>
