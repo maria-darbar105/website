@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <style>
-
         /*body*/
         body
         {
@@ -17,7 +16,6 @@
             font-family: "Montserrat", sans-serif;
             font-size: 20px;
         }
-
         .reveal{
             position: relative;
             transform: translateY(150px);
@@ -29,11 +27,12 @@
             transform: translateY(0);
             opacity: 1;
         }
+
         .grid-container 
         {
             display: grid;
-            grid-template-columns:auto auto auto auto auto;
-            grid-gap: 5px;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
         }
 
         .grid-container > div 
@@ -48,70 +47,100 @@
         {
             margin-top: 8px;
             vertical-align: middle;
+            width: 100%;
         }
-
         .item1a {
             grid-row: 1 / span 2;
         }
         .item1b {
             grid-row: 1 / span 2;
         }
-       </style>
+        .item3b {
+            grid-row: 1 / span 2;
+        }
+        .item3c {
+            grid-row: 1 / span 2;
+        }
+
+/*for desktop*/
+        @media(min-width:768px) {
+            .img-width{
+                width:50%
+            }
+        }
+
+/*for phone*/
+        @media(max-width:768px) and (orientation:portrait)
+        {
+            .grid-container{
+            display: grid;
+            grid-template-columns:auto;
+            grid-gap: 10px;
+            overflow: hidden;
+            }
+            .img-width{
+                width:100%;
+            }
+        }
+        </style>
     </head>
-   
     <body>
-<!--HEADER-->
-    <div class="fade-in-text-header">
-    </div>
         <div class="fade-in-text">
-            <p style="letter-spacing: 3px; text-align: center; padding:20px;">
-                <a style="text-decoration: none;color:rgb(194, 162, 223)" href="artworks.html">artworks</a>
-                <span class="tab"></span><span class="tab"></span><span class="tab"></span>
-                <a style="text-decoration: none;color:rgb(194, 162, 223)" href="crochet.html">crochet</a></p>
+            <div class="center">   
+            <a href="index.html"><img src="images/callmeifyougetlostid.png" height="190" style="filter:drop-shadow(0 0 8px  rgba(206, 197, 130, 0.76));padding:20px"></a> 
+            <br><br>
+            </div>
+            <p style="letter-spacing: 3px; text-align: center;font-size: 24px; color:white;">
+                    <a style="text-decoration: none;color:rgb(194, 162, 223)" href="">artworks</a>
+                    <span class="tab"></span><span class="tab"></span>
+                    <a style="text-decoration: none;color:rgb(194, 162, 223)" href="crochet.html">crochet</a></p>
+        
+        <br><br>
+        
+        <h3 style="text-align: center;color: white;">crochet</h3>
+        <div class="grid-container">
+                <div class="item1a"><div class="zoom"><a href="artwork pages/butterfly top.html"><img src="artworks/butterfly top .jpg"></a></div></div>
+                <div class="item1b"><div class="zoom"><a href="artwork pages/pants.html"><img src="artworks/pants.jpg"></a></div></div>
+            <div class="img-width">    
+                <div class="item1"><div class="zoom"><a href=""><img src="artworks/hat.jpg"></a></div></div>
+                <div class="item1"><div class="zoom"><a href="artwork pages/leg warmers.html"><img src="artworks/leg warmers.jpg"></a></div></div>
+            </div>
         </div>
         <br><br>
 
-        <div class="fade-in-column">
-            <h3 style="text-align: center;font-family:Montserrat, sans-serif;color:white">crochet</h3>
-            <div class="grid-container">
-                <div class="item1a"><div class="zoom"><a href="artwork pages/butterfly top.html"><img src="artworks/butterfly top .jpg" style="height:400px;width:auto;"></a></div></div>
-                <div class="item1b"><div class="zoom"><a href="artwork pages/pants.html"><img src="artworks/pants.jpg" style="height:400px;width:auto;"></a></div></div>
-                <div class="item1"><div class="zoom"><a href="artwork pages/leg warmers.html"><img src="artworks/leg warmers.jpg" style="height:225px;width:auto;"></a></div></div>
-                <div class="item1"><div class="zoom"><a href=""><img src=""></a></div></div>
-                <div class="item1"><div class="zoom"><a href=""><img src=""></a></div></div>
-                <div class="item1"><div class="zoom"><a href=""><img src="artworks/hat.jpg" style="width:210px;"></a></div></div>
-            </div>
-            <br><br>
-            <h3 style="text-align: center;font-family:Montserrat, sans-serif;color:white">custom clothes</h3>    
+        <h3 style="text-align: center;color: white;">custom clothes</h3>
+        <div class="grid-container">
+
         </div>
+        <br><br>
         
-        <br><br><br><br><br><br><br><br>
-
-        <script type="text/javascript">
-            function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                reveals[i].classList.add("active");
+        <div class="container reveal">
+            <script type="text/javascript">
+                function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+    
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+    
+                    if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                    }
                 }
-            }
-            }
+                }
+    
+                window.addEventListener("scroll", reveal);
+            </script>
 
-            window.addEventListener("scroll", reveal);
-        </script>
-        
-        <h3 style="text-align: center;letter-spacing: 2px; position: relative; color:white;font-family:Montserrat, sans-serif;">★ MARIA DARBAR ★</h3>
-        <a href="mailto:mariadarbar05@gmail.com" style="text-decoration: none;" target="_blank" ><h4 style="text-align: center;color:white">mariadarbar05@gmail.com</h4>
-        <p style="text-align: center;font-weight: 100;">
-            <a href="https://www.instagram.com/maria.darbar/" target="_blank"><img src="images/instagram logo.png" width="25" height="25"></a>
-            <span class="tab"></span>
-            <a href="https://www.linkedin.com/in/maria-darbar/" target="_blank"><img src="images/linkedin-xxl.png" width="23" height="23"></a>
-        </p>
-        <h4 style="text-align: center;color:white;">© 2024 All rights reserved.</h4>
-    </body>
+            <h3 style="text-align: center;letter-spacing: 2px; position: relative; color:white;">★ MARIA DARBAR ★</h3>
+            <a href="mailto:mariadarbar05@gmail.com" style="text-decoration: none;" target="_blank" ><h4 style="text-align: center;color:white">mariadarbar05@gmail.com</h4>
+            <p style="text-align: center;font-weight: 100;">
+                <a href="https://www.instagram.com/maria.darbar/" target="_blank"><img src="images/instagram logo.png" width="25" height="25"></a>
+                <span class="tab"></span>
+                <a href="https://www.linkedin.com/in/maria-darbar/" target="_blank"><img src="images/linkedin-xxl.png" width="23" height="23"></a>
+            </p>
+            <h4 style="text-align: center;color:white;">© 2024 All rights reserved.</h4>
+        </div>        
+        </body>    
     </html>
